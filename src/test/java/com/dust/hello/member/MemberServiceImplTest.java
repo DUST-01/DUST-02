@@ -23,6 +23,6 @@ class MemberServiceImplTest {
 
     @Test
     void findMember() {
-        
+
     }
 }
