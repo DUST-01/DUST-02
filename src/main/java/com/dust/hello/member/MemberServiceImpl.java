@@ -3,11 +3,10 @@ package com.dust.hello.member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
-@RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
 
-    private final MemberRepository memberRepository ;//= new MemoryMemberRepository();
+    private final MemberRepository memberRepository = new MemoryMemberRepository();
+
 
 
     @Override
@@ -16,7 +15,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public Member findMember(Long MemberId) {
-        return null;
+    public Member findMember(Long memberId) {
+        return memberRepository.findById(memberId);
     }
 }
