@@ -1,14 +1,12 @@
 package com.dust.hello;
 
 import com.dust.hello.discount.DiscountPolicy;
-import com.dust.hello.discount.FIxDiscountPolicy;
-import com.dust.hello.member.MemberRepository;
+import com.dust.hello.discount.RateDiscountPolicy;
 import com.dust.hello.member.MemberService;
 import com.dust.hello.member.MemberServiceImpl;
 import com.dust.hello.member.MemoryMemberRepository;
 import com.dust.hello.order.OrderService;
 import com.dust.hello.order.OrderServiceImpl;
-import org.springframework.context.annotation.Configuration;
 
 
 public class AppConfig {
@@ -18,7 +16,7 @@ public class AppConfig {
     }
 
     public DiscountPolicy discountPolicy() {
-        return new FIxDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 
     public MemberService memberService() {

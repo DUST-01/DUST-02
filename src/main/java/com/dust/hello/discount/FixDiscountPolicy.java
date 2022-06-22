@@ -3,7 +3,7 @@ package com.dust.hello.discount;
 import com.dust.hello.member.Grade;
 import com.dust.hello.member.Member;
 
-public class FIxDiscountPolicy implements DiscountPolicy {
+public class FixDiscountPolicy implements DiscountPolicy {
 
     private int discountFixAmount = 1000;
 
