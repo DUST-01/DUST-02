@@ -2,6 +2,7 @@ package com.dust.hello;
 
 import com.dust.hello.discount.DiscountPolicy;
 import com.dust.hello.discount.RateDiscountPolicy;
+import com.dust.hello.member.MemberRepository;
 import com.dust.hello.member.MemberService;
 import com.dust.hello.member.MemberServiceImpl;
 import com.dust.hello.member.MemoryMemberRepository;
@@ -14,19 +15,25 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
-    public MemoryMemberRepository MemberRepository() {
+    public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
+
     @Bean
     public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
+
     @Bean
     public MemberService memberService() {
-        return new MemberServiceImpl(MemberRepository());
+        System.out.println("call AppConfig.memberService");
+        return new MemberServiceImpl(memberRepository());
     }
+
     @Bean
     public OrderService orderService() {
-        return new OrderServiceImpl(MemberRepository(), discountPolicy());
+        System.out.println("call AppConfig.orderService");
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 }
