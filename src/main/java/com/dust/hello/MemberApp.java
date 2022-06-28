@@ -3,12 +3,12 @@ package com.dust.hello;
 import com.dust.hello.member.Grade;
 import com.dust.hello.member.Member;
 import com.dust.hello.member.MemberService;
-import com.dust.hello.member.MemberServiceImpl;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 

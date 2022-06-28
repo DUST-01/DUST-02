@@ -1,7 +1,5 @@
 package com.dust.hello.member;
 
-import com.dust.hello.member.Grade;
-
 public class Member {
 
     private Long id;
