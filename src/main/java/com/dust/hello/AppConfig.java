@@ -2,6 +2,7 @@ package com.dust.hello;
 
 import com.dust.hello.discount.DiscountPolicy;
 import com.dust.hello.discount.FixDiscountPolicy;
+import com.dust.hello.discount.RateDiscountPolicy;
 import com.dust.hello.member.MemberRepository;
 import com.dust.hello.member.MemberService;
 import com.dust.hello.member.MemberServiceImpl;
@@ -26,8 +27,10 @@ public class AppConfig {
         return new OrderServiceImpl(new MemoryMemberRepository(), discountPolicy());
     }
 
+    // 할인 정책 변경 시, 애플리케이션의 구성 역할을 담당하는 AppConfig만 변경하면 됨 (사용영역 코드수정 불필요)
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+//        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
  
 }
