@@ -1,4 +1,4 @@
-package scan.filter;
+package com.dust.hello.scan.filter;
 
 @MyIncludeComponent
 public class BeanA {

@@ -1,4 +1,4 @@
-package singleton;
+package com.dust.hello.singleton;
 
 import com.dust.hello.AppConfig;
 import com.dust.hello.member.MemberService;

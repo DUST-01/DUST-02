@@ -1,9 +1,9 @@
-package scan.filter;
+package com.dust.hello.scan.filter;
 
 import java.lang.annotation.*;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface MyExcludeComponent {
+public @interface MyIncludeComponent {
 }

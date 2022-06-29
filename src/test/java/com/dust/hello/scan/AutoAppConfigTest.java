@@ -1,4 +1,4 @@
-package scan;
+package com.dust.hello.scan;
 
 import com.dust.hello.AutoAppConfig;
 import com.dust.hello.member.MemberService;

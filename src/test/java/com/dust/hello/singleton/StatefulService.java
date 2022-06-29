@@ -1,4 +1,4 @@
-package singleton;
+package com.dust.hello.singleton;
 
 public class StatefulService {
 
