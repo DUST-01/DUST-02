@@ -2,7 +2,10 @@ package com.dust.hello.discount;
 
 import com.dust.hello.member.Grade;
 import com.dust.hello.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
 
     private int discountFixAmount = 1000;   // 1000원 할인인
