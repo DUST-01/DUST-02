@@ -1,10 +1,15 @@
 package com.dust.hello.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
     /*@Override 에 의해 MemberRepository 에 있는 메서드가 아닌 MemoryMemberRepository 의 메서드가 호출됨*/
     private final MemberRepository memberRepository;
 
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
