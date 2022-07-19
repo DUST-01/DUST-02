@@ -1,5 +1,6 @@
 package com.dust.hello.order;
 
+import com.dust.hello.annotation.MainDiscountPolicy;
 import com.dust.hello.discount.DiscountPolicy;
 import com.dust.hello.member.Member;
 import com.dust.hello.member.MemberRepository;
@@ -11,7 +12,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
